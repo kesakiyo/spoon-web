@@ -63,7 +63,7 @@ class Calendar extends React.Component {
       {
         [styles.clickable]: date,
         [styles.today]: this.isToday(date),
-        [styles.selected]: this.isSelected(date),
+        [styles.selected]: date && this.isSelected(date),
         [styles.schedule]: this.hasSchedule(date),
       }
     )
