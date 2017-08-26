@@ -84,7 +84,10 @@ class DailySchedule extends React.Component {
         </div>
         <div className={styles.list}>
           {this.props.dailySchedules.map(schedule => (
-            <ScheduleItem className={styles.item} schedule={schedule} />
+            <ScheduleItem
+              key={schedule.id}
+              className={styles.item}
+              schedule={schedule} />
           ))}
         </div>
       </div>

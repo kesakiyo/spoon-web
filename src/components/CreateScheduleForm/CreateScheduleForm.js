@@ -20,8 +20,9 @@ class CreateScheduleForm extends React.Component {
   @autobind
   handleSubmit(schedule) {
     this.props.onCreate(schedule)
-      .promise(() => {
-        this.props.onHide()
+      .promise
+      .then(() => {
+        this.props.onCancel()
       }, () => {
         console.log('스케줄 생설 실패')
       })
